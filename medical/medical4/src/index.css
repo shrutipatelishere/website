@@ -1,0 +1,237 @@
+/* ============================================
+   Medix Hospital - Premium Medical Website
+   Unique Teal/Emerald Theme
+   ============================================ */
+
+:root {
+  /* Primary Colors - Teal/Emerald */
+  --primary: #0f766e;
+  --primary-dark: #0d5c56;
+  --primary-light: #14b8a6;
+  --primary-soft: rgba(15, 118, 110, 0.1);
+
+  /* Accent Colors */
+  --accent: #06b6d4;
+  --accent-rose: #f43f5e;
+  --accent-amber: #f59e0b;
+  --accent-violet: #8b5cf6;
+
+  /* Gradients */
+  --gradient: linear-gradient(135deg, #0f766e 0%, #06b6d4 100%);
+  --gradient-dark: linear-gradient(135deg, #0d5c56 0%, #0891b2 100%);
+  --gradient-glow: linear-gradient(135deg, rgba(15, 118, 110, 0.8) 0%, rgba(6, 182, 212, 0.8) 100%);
+  --gradient-soft: linear-gradient(135deg, rgba(15, 118, 110, 0.1) 0%, rgba(6, 182, 212, 0.1) 100%);
+
+  /* Backgrounds */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f0fdfa;
+  --bg-tertiary: #f8fafc;
+  --bg-dark: #0a1a1f;
+  --bg-darker: #051014;
+
+  /* Text Colors */
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+  --text-light: #f1f5f9;
+
+  /* Borders & Shadows */
+  --border: #e2e8f0;
+  --border-light: rgba(255, 255, 255, 0.1);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.12);
+  --shadow-xl: 0 25px 60px rgba(0, 0, 0, 0.15);
+  --shadow-glow: 0 10px 40px rgba(15, 118, 110, 0.3);
+
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 30px;
+  --radius-2xl: 40px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Reset */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  background: var(--bg-primary);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+ul { list-style: none; }
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* Utility Classes */
+.gradient-text {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--primary-soft);
+  color: var(--primary);
+  padding: 10px 20px;
+  border-radius: var(--radius-full);
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+
+.section-tag.light {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+}
+
+.section-header {
+  margin-bottom: 60px;
+}
+
+.section-header h2 {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.section-header p {
+  font-size: 18px;
+  max-width: 600px;
+  color: var(--text-secondary);
+}
+
+.section-header.center {
+  text-align: center;
+}
+
+.section-header.center p {
+  margin: 0 auto;
+}
+
+.section-header.light h2,
+.section-header.light p {
+  color: white;
+}
+
+.section-header.light p {
+  opacity: 0.8;
+}
+
+/* Cursor Glow */
+.cursor-glow {
+  position: fixed;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(15, 118, 110, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9998;
+  transition: opacity 0.3s;
+}
+
+/* Back to Top */
+.back-to-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 56px;
+  height: 56px;
+  background: var(--gradient);
+  border-radius: 50%;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px) rotate(-45deg);
+  transition: var(--transition);
+  box-shadow: var(--shadow-glow);
+  z-index: 999;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) rotate(0);
+}
+
+.back-to-top:hover {
+  transform: translateY(-5px);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .section-header h2 { font-size: 40px; }
+  .container { padding: 0 24px; }
+}
+
+@media (max-width: 768px) {
+  .section-header h2 { font-size: 32px; }
+  .section-header p { font-size: 16px; }
+  .cursor-glow { display: none; }
+}
+
+@media (max-width: 480px) {
+  .section-header h2 { font-size: 28px; }
+  .container { padding: 0 16px; }
+}

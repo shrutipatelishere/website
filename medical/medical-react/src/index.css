@@ -1,0 +1,9 @@
+/* Reset default Vite styles - Using custom App.css styles */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  width: 100%;
+}

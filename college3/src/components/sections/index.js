@@ -1,0 +1,11 @@
+export { Hero } from './Hero';
+export { About } from './About';
+export { Programs } from './Programs';
+export { Admissions } from './Admissions';
+export { Research } from './Research';
+export { Campus } from './Campus';
+export { News } from './News';
+export { Testimonials } from './Testimonials';
+export { Faculty } from './Faculty';
+export { FAQ } from './FAQ';
+export { Contact } from './Contact';

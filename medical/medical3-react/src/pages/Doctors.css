@@ -1,0 +1,316 @@
+/* Doctors Hero */
+.doctors-hero {
+  padding: var(--space-20) 0;
+  background: var(--bg-gradient);
+  text-align: center;
+}
+
+.doctors-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.doctors-hero-content h1 {
+  font-size: var(--text-5xl);
+  margin-bottom: var(--space-3);
+}
+
+.doctors-hero-content p {
+  font-size: var(--text-lg);
+  color: var(--text-secondary);
+}
+
+/* Doctors Main */
+.doctors-main {
+  background: var(--white);
+}
+
+/* Filters */
+.doctors-filters {
+  margin-bottom: var(--space-10);
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  background: var(--white);
+  padding: var(--space-3) var(--space-5);
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-light);
+  max-width: 400px;
+  margin-bottom: var(--space-5);
+}
+
+.search-box svg {
+  color: var(--text-muted);
+  font-size: 20px;
+}
+
+.search-box input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: var(--text-base);
+  background: transparent;
+}
+
+.filter-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.filter-tab {
+  padding: var(--space-2) var(--space-4);
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: var(--transition-normal);
+}
+
+.filter-tab:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.filter-tab.active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--white);
+}
+
+/* Doctors Grid - Matching Reference Design */
+.doctors-page .doctors-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+}
+
+.doctors-page .doctor-card {
+  text-align: center;
+  padding: var(--space-8) var(--space-5);
+  transition: var(--transition-normal);
+  background: var(--white);
+  border-radius: var(--radius-2xl);
+  border: 1px solid var(--border-light);
+}
+
+.doctors-page .doctor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Doctor Image - Circular Style */
+.doctor-image-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--space-6);
+}
+
+.doctor-image-circle {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: var(--gray-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: 4px solid transparent;
+  transition: var(--transition-normal);
+  overflow: hidden;
+}
+
+.doctor-image-circle.featured-border {
+  border-color: var(--color-primary);
+  background: var(--primary-100);
+  padding: 6px;
+}
+
+.doctor-image-circle.featured-border .doctor-avatar-img {
+  border-radius: 50%;
+}
+
+.doctor-card:hover .doctor-image-circle {
+  border-color: var(--color-primary);
+}
+
+.doctor-avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Doctor Info */
+.doctors-page .doctor-info {
+  text-align: center;
+}
+
+.doctors-page .doctor-info h3 {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  margin-bottom: var(--space-1);
+  color: var(--text-primary);
+}
+
+.doctors-page .doctor-specialty {
+  display: block;
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  margin-bottom: var(--space-5);
+}
+
+/* Doctor Social - Dark Circle Buttons */
+.doctors-page .doctor-social {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-2);
+}
+
+.doctors-page .social-btn {
+  width: 40px;
+  height: 40px;
+  background: var(--gray-800);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 16px;
+  transition: var(--transition-normal);
+}
+
+.doctors-page .social-btn:hover {
+  background: var(--color-primary);
+  transform: scale(1.1);
+}
+
+/* Featured Card */
+.doctors-page .doctor-card.featured {
+  background: var(--primary-50);
+  border-color: var(--primary-200);
+}
+
+/* No Results */
+.no-results {
+  text-align: center;
+  padding: var(--space-16) 0;
+}
+
+.no-results svg {
+  font-size: 60px;
+  color: var(--primary-200);
+  margin-bottom: var(--space-4);
+}
+
+.no-results h3 {
+  margin-bottom: var(--space-2);
+}
+
+.no-results p {
+  color: var(--text-muted);
+}
+
+/* Join Section */
+.join-section {
+  background: var(--color-primary);
+  padding: var(--space-12) 0;
+}
+
+.join-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-8);
+}
+
+.join-text h2 {
+  color: var(--white);
+  font-size: var(--text-2xl);
+  margin-bottom: var(--space-2);
+}
+
+.join-text p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: var(--text-base);
+}
+
+.join-section .btn-primary {
+  background: var(--white);
+  color: var(--color-primary);
+  box-shadow: none;
+}
+
+.join-section .btn-primary:hover {
+  background: var(--gray-100);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .doctors-page .doctors-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .doctor-image-circle {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .doctors-page .doctors-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .doctors-hero-content h1 {
+    font-size: var(--text-4xl);
+  }
+
+  .doctors-page .doctors-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+  }
+
+  .doctors-page .doctor-card {
+    padding: var(--space-6) var(--space-4);
+  }
+
+  .doctor-image-circle {
+    width: 130px;
+    height: 130px;
+  }
+
+  .doctors-page .doctor-info h3 {
+    font-size: var(--text-lg);
+  }
+
+  .filter-tabs {
+    justify-content: center;
+  }
+
+  .join-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .doctors-page .doctors-grid {
+    grid-template-columns: 1fr;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .doctor-image-circle {
+    width: 160px;
+    height: 160px;
+  }
+}

@@ -1,0 +1,228 @@
+/* ============================================
+   Services Page Styles
+   ============================================ */
+
+/* Highlights Bar */
+.highlights-bar {
+  background: white;
+  padding: 40px 0;
+  margin-top: -40px;
+  position: relative;
+  z-index: 10;
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
+}
+
+.highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.highlight-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(37, 99, 235, 0.1);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: var(--primary-color);
+}
+
+.highlight-text h4 {
+  font-size: 18px;
+  color: var(--text-dark);
+  margin-bottom: 2px;
+}
+
+.highlight-text p {
+  color: var(--text-gray);
+  font-size: 14px;
+}
+
+/* Services Main */
+.services-main {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #f8fbff 0%, #e8f4fd 100%);
+}
+
+.services-page .services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.services-page .service-card {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.services-page .service-card:hover {
+  border-color: var(--primary-color);
+}
+
+.services-page .service-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  color: white;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.services-page .service-card:hover .service-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.services-page .service-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: var(--text-dark);
+}
+
+.services-page .service-card > p {
+  color: var(--text-gray);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.service-features {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.service-features li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-dark);
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.service-features li svg {
+  color: var(--primary-color);
+  font-size: 14px;
+}
+
+.services-page .service-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary-color);
+  font-weight: 600;
+  text-decoration: none;
+  transition: gap 0.3s ease;
+}
+
+.services-page .service-link:hover {
+  gap: 12px;
+}
+
+/* Services CTA */
+.services-cta {
+  padding: 80px 0;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+.services-cta .cta-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.services-cta .cta-text h2 {
+  font-size: 36px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.services-cta .cta-text p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 18px;
+}
+
+.services-cta .cta-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.services-cta .btn-white {
+  background: white;
+  color: var(--primary-color);
+}
+
+.services-cta .btn-white:hover {
+  background: var(--bg-light);
+}
+
+.services-cta .btn-outline-white {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.services-cta .btn-outline-white:hover {
+  background: white;
+  color: var(--primary-color);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .highlights-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .services-page .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .services-cta .cta-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .highlights-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-page .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-cta .cta-text h2 {
+    font-size: 28px;
+  }
+
+  .services-cta .cta-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .services-cta .cta-buttons .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
